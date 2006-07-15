@@ -1,0 +1,59 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: turnstile - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP8D.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib comctl32.lib rpcrt4.lib winmm.lib wsock32.lib wxmsw250d.lib /nologo /subsystem:windows /profile /debug /machine:I386 /out:"bin/turnstile.exe" /libpath:"C:\wxWindows\lib\\" 
+.\debug\aboutdialog.obj
+.\debug\app.obj
+.\debug\buddy.obj
+.\debug\buddytreectrl.obj
+.\debug\clientsocket.obj
+.\debug\connection.obj
+.\debug\connectionthread.obj
+.\debug\crypto.obj
+.\debug\debugframe.obj
+.\debug\dhtutils.obj
+.\debug\eraser.obj
+.\debug\fileframe.obj
+.\debug\files.obj
+.\debug\filetransferthread.obj
+.\debug\findbuddyframe.obj
+.\debug\finger.obj
+.\debug\frameutils.obj
+.\debug\hashtable.obj
+.\debug\hostcache.obj
+.\debug\imeventqueue.obj
+.\debug\imframe.obj
+.\debug\lookupresponse.obj
+.\debug\mainframe.obj
+.\debug\network.obj
+.\debug\packet.obj
+.\debug\packetgen.obj
+.\debug\prefframe.obj
+.\debug\prefs.obj
+.\debug\profiledialog.obj
+.\debug\server.obj
+.\debug\serversocket.obj
+.\debug\socketbase.obj
+.\debug\typeconv.obj
+.\debug\utils.obj
+.\debug\turnstile.res
+.\crypto\crypto.lib
+]
+Creating command line "link.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP8D.tmp"
+<h3>Output Window</h3>
+Linking...
+
+
+
+<h3>Results</h3>
+turnstile.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

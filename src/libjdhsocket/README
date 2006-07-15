@@ -1,0 +1,13 @@
+JdhSocket Library - Portable, Thread Safe Sockets Library
+
+Please see the COPYING file for copyright information.
+
+* This is a wrapper to the basic c socket functions as well as extra
+	functionality, error detection, and may be used in a
+	multithreaded environment.
+* Many of the base c function calls share memory.  This aims to make
+	those calls thread safe.
+* The library has only been tested with Linux and Win32.
+* The thread safe capabilities use the wxWidgets library.  Maybe in
+	the future I'll use the pthreads library.  I just have no
+	burning need to use them.

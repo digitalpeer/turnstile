@@ -1,0 +1,112 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=utf-8">
+	<TITLE>Turnstile Code Design</TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 1.1.0  (Linux)">
+	<META NAME="CREATED" CONTENT="20040315;15120400">
+	<META NAME="CHANGED" CONTENT="20040323;16201700">
+	<STYLE>
+	<!--
+		A:link { color: #0000ff }
+		A:visited { color: #800080 }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="en-US" LINK="#0000ff" VLINK="#800080" BGCOLOR="#fffffb" DIR="LTR">
+<P><FONT FACE="Arial"><FONT SIZE=6><B>Turnstile Code Design</B></FONT></FONT></P>
+<P><FONT FACE="Arial"><B>Turnstile Project </B><BR><B>J.D.
+Henderson &lt;<A HREF="http://www.digitalpeer.com/projects/yawp/">http://www.digitalpeer.com/projects/turnstile/</A>&gt;</B></FONT></P>
+<P><FONT FACE="Arial"><FONT SIZE=2>This document and the information
+contained herein is provided on an &quot;AS IS&quot; basis and J.D.
+HENDERSON DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT
+NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION HEREIN
+WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF
+MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.</FONT></FONT></P>
+<P><FONT FACE="Arial"><B>Revision History</B></FONT></P>
+<P><FONT FACE="Arial"><FONT SIZE=2><I>November 10, 2003, J.D.
+Henderson</I> - Initial Draft Release</FONT></FONT></P>
+<P><FONT FACE="Arial"><B>Table of Contents</B></FONT></P>
+<H2><FONT FACE="Arial">Abstract</FONT></H2>
+<BLOCKQUOTE>
+      <P><FONT FACE="Arial"><FONT SIZE=2>Turnstile is a peer-to-peer client
+using a custom protocol named YAWP (Yet Another Wonderful Protocol). 
+YAWP implements a network providing distribution of data, secure
+real-time communication with trusted and untrusted users, and
+scalability.   YAWP aims to conquer problems experienced with
+existing peer-to-peer protocols and their susceptibility to attack
+and limited widespread usage.  The YAWP protocol is largely based on
+the usage of a distributed hash table to effectively locate data
+quickly in a dynamic network of computers.</FONT></FONT></P>
+</BLOCKQUOTE>
+<P><FONT FACE="Arial"><FONT SIZE=5><B>Code Guidelines</B></FONT></FONT></P>
+<BLOCKQUOTE>
+      <P><FONT FACE="Arial"><FONT SIZE=2>Turnstile is written in C++.</FONT></FONT></P>
+</BLOCKQUOTE>
+<P><FONT FACE="Arial"><FONT SIZE=5><B>APIs and Libraries</B></FONT></FONT></P>
+<BLOCKQUOTE>
+      <P><FONT FACE="Arial"><B>wxWindows</B></FONT></P><P><FONT FACE="Arial"><FONT SIZE=2>wxWdinows is an event driven
+framework that Turnstile is based on.&nbsp; All GUI interfaces,
+socket programming, and events are handled by this framework.&nbsp;
+Besides providing all the necessary classes and function to develop
+Turntile, it gives the ability to easily produce cross platform
+version of Turnstile.</FONT></FONT></P><P><FONT FACE="Arial"><B>crypto++</B></FONT></P><P>A modified version of the crypto++ library is included for access
+to encryption and hash functions.&nbsp; It is compiled as a static
+library and linked to the main binary.</P>
+</BLOCKQUOTE>
+<P><FONT FACE="Arial"><FONT SIZE=5><B>GUI Windows</B></FONT></FONT></P>
+<BLOCKQUOTE>
+      <P><FONT FACE="Arial"><B>Main Window</B></FONT></P><P><FONT FACE="Arial"><FONT SIZE=2>This window is the Buddy list and
+provides minimal statistical information about transfers and network
+status.&nbsp; This window is the mediator of all other windows and
+provides access to each of the sub windows.</FONT></FONT></P><P><FONT FACE="Arial"><B>Buddy List</B></FONT></P><P><FONT FACE="Arial"><FONT SIZE=2>the buddy list dis-layed a tree
+view of groups and buddies.&nbsp; Thje only use for groups are for
+user orgonizational purposes.</FONT></FONT></P><P><FONT FACE="Arial"><B>File Window</B></FONT></P><P><FONT FACE="Arial"><FONT SIZE=2>This window is a tabbed window
+that provides access to file search capabilities, current downloads,
+and current uploads.</FONT></FONT></P><P><FONT FACE="Arial"><B>Debug Window</B></FONT></P><P><FONT FACE="Arial"><FONT SIZE=2>This window displays information
+about what the client is currently doing in detail.&nbsp; It shows
+all local events as well as network events and trafic.</FONT></FONT></P><P><FONT FACE="Arial"><B>Instant Message Windows</B></FONT></P><P><FONT FACE="Arial"><FONT SIZE=2>This window is used for
+communication with a single buddy.&nbsp; Each buddy on the buddy list
+has its own window that is opened by the user or on reception of an
+Instant Message.</FONT></FONT></P><P><FONT FACE="Arial"><B>Preferences Window</B></FONT></P>
+      <UL>
+            <LI><P STYLE="margin-bottom: 0in"><FONT SIZE=2><FONT FACE="Arial">Tab:
+	Connection</FONT></FONT> </P>
+            <LI><P STYLE="margin-bottom: 0in"><FONT SIZE=2><FONT FACE="Arial">Tab:
+	Privacy</FONT></FONT> </P>
+            <LI><P><FONT SIZE=2><FONT FACE="Arial">Tab: User</FONT></FONT> </P>
+      </UL>
+</BLOCKQUOTE>
+<P><FONT FACE="Arial"><FONT SIZE=5><B>Files and Directories</B></FONT></FONT></P>
+<UL>
+	<LI><P STYLE="margin-bottom: 0in"><FONT FACE="Arial" SIZE="2">.turnstile</FONT></P>
+    <LI><P STYLE="margin-bottom: 0in"><FONT FACE="Arial" SIZE="2">.turnstile.dat</FONT> <BR>
+          This file is created in .turnstile and saves the user&#39;s preferences.&nbsp; The file is in the format:<BR>
+          [key] data1 data2 ...</P>
+    <LI><P><FONT SIZE=2><FONT FACE="Arial">hostcache.txt<BR>
+          This file simply lists hosts to connect to with a priority count.&nbsp; The priority count usually starts at 0 and gets incrimented on each connection to the host.&nbsp; The file 
+          contains lines in the following format:<BR>
+          host/port</FONT></FONT> </P>
+</UL>
+<P><FONT FACE="Arial"><FONT SIZE=5><B>Code Layout</B></FONT></FONT></P>
+<P><FONT FACE="Arial"><FONT SIZE=5><B>Features</B></FONT></FONT></P>
+<P><FONT FACE="Arial"><FONT SIZE=5><B>Connections</B></FONT></FONT></P>
+<BLOCKQUOTE>
+      <P><FONT FACE="Arial"><FONT SIZE=2>Connections are basically wrappers
+around sockets.&nbsp; However, this class has built in routines for
+handling what should happen, depenindg on the type of connection it
+is.&nbsp; The type of connection is determined by the local client,
+or by handshaking if the connection was created from a server
+request.</FONT></FONT></P>
+</BLOCKQUOTE>
+<P><FONT FACE="Arial"><FONT SIZE=5><B>Routines</B></FONT></FONT></P>
+<P><FONT FACE="Arial"><FONT SIZE=2>This section tries to describe
+some of those routines for a better general understanding.&nbsp;
+However, looking at the actual code is a far better way to understand
+exactly what is going on.</FONT></FONT></P>
+<P><FONT FACE="Arial"><B>Local Client Initiates Search for Key</B></FONT></P>
+<P><FONT FACE="Arial"><B>Local Client Initiates Download File</B></FONT></P>
+<P><FONT FACE="Arial"><B>Local Client Initiates Buddy Instant Message</B></FONT></P>
+<P><FONT FACE="Arial"><B>Server Receives Connection</B></FONT></P>
+</BODY>
+</HTML>

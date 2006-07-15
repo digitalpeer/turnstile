@@ -1,0 +1,3 @@
+Turnstile - Second Generation Instant Messaging and File Sharing Client
+
+Turnstile is a peer-to-peer client using a custom protocol named YAWP (Yet Another Wonderful Protocol).  YAWP implements a network providing distribution of data, secure real-time communication with trusted and untrusted users, and scalability.   YAWP aims to conquer problems experienced with existing peer-to-peer protocols and their susceptibility to attack and limited widespread usage.  The YAWP protocol is largely based on the usage of a distributed hash table to effectively locate data quickly in a dynamic network of computers.

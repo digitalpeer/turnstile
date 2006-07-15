@@ -1,0 +1,44 @@
+
+EXTRA_DIST= aboutframe.xpm \
+about_logo.xpm \
+buddy_away.xpm \
+buddy_connected.xpm \
+buddy_group.xpm \
+buddy_offline.xpm \
+buddy_online.xpm \
+debugframe.xpm \
+fileframe_download.xpm \
+fileframe_search.xpm \
+fileframe_upload.xpm \
+fileframe.xpm \
+findbuddyframe.xpm \
+imframe_close.xpm \
+imframe_hide.xpm \
+imframe_send.xpm \
+imframe.xpm \
+mainframe_findbuddy.xpm \
+mainframe_findfile.xpm \
+mainframe.xpm \
+menu_about.xpm \
+menu_addbuddy.xpm \
+menu_addgroup.xpm \
+menu_buddy_ban.xpm \
+menu_buddy_connect.xpm \
+menu_buddy_im.xpm \
+menu_buddy_info.xpm \
+menu_buddy_log.xpm \
+menu_buddy_remove.xpm \
+menu_debug.xpm \
+menu_exit.xpm \
+menu_findbuddy.xpm \
+menu_find.xpm \
+menu_prefs.xpm \
+menu_sign.xpm \
+offline.xpm \
+online.xpm \
+prefframe_buddylist.xpm \
+prefframe_connection.xpm \
+prefframe_filetransfer.xpm \
+prefframe_user.xpm \
+prefframe.xpm \
+profiledialog.xpm

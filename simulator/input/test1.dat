@@ -1,0 +1,33 @@
+Some Results
+32 nodes, 5.6 average hops
+
+
+# Initial number of nodes.
+# Initially build the network up to this number of nodes.
+500
+
+# Latency (milliseconds)
+# Time required to send a packet to another node.
+# This includes network latency and encryption.
+500
+
+# Max hashes per node.
+# The maximum number of random hashes a node will be resposible for.
+50
+
+# Exponential finger [1/0]
+# Use an exponential finger table in which a new node will find up to 160 nodes
+# an exponential distance (power of 2) away.
+1
+
+# Cache finger [1/0]
+# Cache any node connected to in the finger table.
+1
+
+# Fail Node Interval (seconds).
+# Pick a random node and remove it form the network impropely.
+100
+
+# Add node interval (seconds)
+# Add a node to the initial network every interval.
+5000

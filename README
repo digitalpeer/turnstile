@@ -1,0 +1,21 @@
+Turnstile - Second Generation Peer-to-Peer Instant Messaging and File Sharing Client
+
+This is a research project that implements a P2P protocol (YAWP) and client that includes
+file sharing and instant messaging.  The design is based on a distributed hash table
+to find all resources on the network.
+
+Joshua Henderson <http://www.digitalpeer.com/>
+
+
+Dependencies
+------------
+This depends on version wxGTK-2.8.12 of wxWidgets compiled without unicode support.
+
+
+Building
+--------
+./autogen.sh
+./configure
+make
+
+See /doc for more information.
